@@ -20,6 +20,8 @@ public class ConnectingJDBC {
 
 		Connection con = DriverManager.getConnection(url, user, password);
 
+		System.out.println("Connected successfully");
+
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(query);
 		while (rs.next()) {
